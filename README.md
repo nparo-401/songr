@@ -17,10 +17,10 @@
     * [RouteController.java](./src/main/java/com/nparo/songr/RouteController.java)
     * [SongrApplication.java](./src/main/java/com/nparo/songr/SongrApplication.java)
   * /resources/templates
-    * [capitalize.html](.src/main/resources/templates/capitalize.html)
-    * [hello.html](.src/main/resources/templates/hello.html)
-    * [index.html](.src/main/resources/templates/index.html)
-    * [reverse.html](.src/main/resources/templates/reverse.html)
+    * [capitalize.html](./src/main/resources/templates/capitalize.html)
+    * [hello.html](./src/main/resources/templates/hello.html)
+    * [index.html](./src/main/resources/templates/index.html)
+    * [reverse.html](./src/main/resources/templates/reverse.html)
 * src/test
   * [RouteControllerTest.java](./src/test/java/com/nparo/songr/RouteControllerTest.java)
 
