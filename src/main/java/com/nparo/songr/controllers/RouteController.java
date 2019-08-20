@@ -1,4 +1,4 @@
-package com.nparo.songr;
+package com.nparo.songr.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -39,14 +39,14 @@ public class RouteController {
   }
 
   public static String setReverse(String sentence) {
-    StringBuilder reversed = new StringBuilder();
+    StringBuilder reversedString = new StringBuilder();
     String[] splitSentence = sentence.split(" ");
     for (int i = splitSentence.length - 1; i >= 0 ; i--) {
-      reversed.append(splitSentence[i]);
+      reversedString.append(splitSentence[i]);
       if (i > 0) {
-        reversed.append(" ");
+        reversedString.append(" ");
       }
     }
-    return reversed.toString();
+    return reversedString.toString();
   }
 }

@@ -2,7 +2,7 @@ package com.nparo.songr;
 
 import org.junit.Test;
 
-import static com.nparo.songr.RouteController.*;
+import static com.nparo.songr.controllers.RouteController.*;
 import static org.junit.Assert.*;
 
 public class RouteControllerTest {
