@@ -14,8 +14,9 @@
 ### Files
 * src/main
   * /java
-    * [RouteController.java](./src/main/java/com/nparo/songr/controllers/RouteController.java)
     * [SongrApplication.java](./src/main/java/com/nparo/songr/SongrApplication.java)
+  * /java/controllers
+    * [RouteController.java](./src/main/java/com/nparo/songr/controllers/RouteController.java)
   * /resources/templates
     * [capitalize.html](./src/main/resources/templates/capitalize.html)
     * [hello.html](./src/main/resources/templates/hello.html)
