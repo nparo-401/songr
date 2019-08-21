@@ -1,14 +1,34 @@
 <a name="top"><a/>
 ## Songr
 ### Table of Contents
+* [How to Run](#run)
+* [Resources](#resources)
 * [Files](#files)
 * [Methods](#methods)
 
+<a name="run"></a>
 ### How To Run
 1. open a command line interface
 2. cd into the songr directory
-3. run: `./gradlew bootRun`
-4. open a browser and type `localhost:8080` as the URL
+3. on first run:
+  * `cd src/main/resources/`
+  * `open application.properties`
+  * uncomment line 2 (remove the '#'), save and exit
+  * `cd ../../..`
+4. run: `./gradlew bootRun`
+5. open a browser and type `localhost:8080` as the URL
+6. after first run:
+  * `cd src/main/resources/`
+  * `open application.properties`
+  * comment line 2 (add the '#')
+
+<a name="resources"></a>
+### Resources
+* [HTML Forms](https://www.w3schools.com/html/html_forms.asp)
+* Matt Stuhring
+* Renee Messick
+* Travis Cox
+* Melfi Perez
 
 <a name="files"></a>
 ### Files
@@ -17,7 +37,12 @@
     * [SongrApplication.java](./src/main/java/com/nparo/songr/SongrApplication.java)
   * /java/controllers
     * [RouteController.java](./src/main/java/com/nparo/songr/controllers/RouteController.java)
+    * [AlbumController.java](./src/main/java/com/nparo/songr/controllers/AlbumController.java)
+  * /java/models
+    * [Album.java](./src/main/java/com/nparo/songr/models/Album.java)
+    * [AlbumRepository.java](./src/main/java/com/nparo/songr/models/AlbumRepository.java)
   * /resources/templates
+    * [albums.html](./src/main/resources/templates/albums.html)
     * [capitalize.html](./src/main/resources/templates/capitalize.html)
     * [hello.html](./src/main/resources/templates/hello.html)
     * [index.html](./src/main/resources/templates/index.html)
@@ -39,6 +64,14 @@
 * Helper Methods:
   * `public static String setCapitalize(String words)`
   * `public static String setReverse(String sentence)`
+
+**AlbumController**
+* Variables:
+  * `@Autowired AlbumRepository albumRepository`
+* Routers:
+  * `@GetMapping("/albums") public String getAllAlbums(Model m)`
+  * `@PostMapping("/albums") public RedirectView addAlbum(String title, String artist, int songCount, int length, String imageUrl)`
   
-  **[Back to Top](#top)**
+
+**[Back to Top](#top)**
   
