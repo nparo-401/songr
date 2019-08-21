@@ -13,14 +13,17 @@
 3. on first run:
   * `cd src/main/resources/`
   * `open application.properties`
-  * uncomment line 2 (remove the '#'), save and exit
+  * uncomment line 2 and 3 (remove the '#'):
+    * line 2 enter your PostgreSQL username after '='
+    * line 3 enter your PostgreSQL password after '='
+  * uncomment line 4 (remove the '#'), save and exit
   * `cd ../../..`
 4. run: `./gradlew bootRun`
 5. open a browser and type `localhost:8080` as the URL
 6. after first run:
   * `cd src/main/resources/`
   * `open application.properties`
-  * comment line 2 (add the '#')
+  * comment line 4 (add the '#')
 
 <a name="resources"></a>
 ### Resources
