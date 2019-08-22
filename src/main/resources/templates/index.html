@@ -2,14 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>Songr Home</title>
+    <link
+     href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+     rel="stylesheet"
+     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+     crossorigin="anonymous"
+    >
   </head>
   <body>
-    <h1>Enter a route for the URL from the following options:</h1>
-    <ul>
-      <li>/hello</li>
-      <li>/capitalize/(enter word/s here)</li>
-      <li>/reverse?sentence=(enter a sentence here)</li>
-    </ul>
+
+    <div class="jumbotron">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Songr</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" th:href="${'/albums'}">Add Album</a>
+            <a class="nav-item nav-link" th:href="${'/allAlbums'}">All Albums</a>
+            <a class="nav-item nav-link" th:href="${'/songs'}">Add Song</a>
+            <a class="nav-item nav-link" th:href="${'/allSongs'}">All Songs</a>
+          </div>
+        </div>
+      </nav>
+      <h1>Songr Home</h1>
+    </div>
+
+    <div class="container">
+      <h3>Try adding a route to the ending of the URL before going to a nav point!</h3>
+      <div class="row">
+        <div class="col">
+            <ul style="list-style-type:none">
+              <li>/hello</li>
+              <li>/capitalize/(enter word/s here)</li>
+              <li>/reverse?sentence=(enter a sentence here)</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  
   </body>
 </html>

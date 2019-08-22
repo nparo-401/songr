@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="UTF-8">
 	<title>All Songs</title>
@@ -11,9 +11,10 @@
 	>
 </head>
 <body>
+
 	<div class="jumbotron">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="#">Songr</a>
+			<a class="navbar-brand" href="/">Songr</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -35,7 +36,7 @@
 				<a th:href="${ '/songs/ ' + song.album}" style="color:black; text-decoration:none">
 					<ul style="list-style-type:none">
 						<li><b>Song: </b><span th:id="${song.title}" th:text="${song.title}"></span></li>
-						<li><b>Length: </b><span th:id="${song.length}" th:text="${song.length}"></span> minutes</li>
+						<li><b>Length: </b><span th:id="${song.length}" th:text="${song.length}"></span> seconds</li>
 						<li><b>Track Number: </b><span th:id="${song.trackNumber}" th:text="${song.trackNumber}"></span></li>
 						<li><b>Album: </b><span th:id="${song.album.title}" th:text="${song.album.title}"></span></li>
 						<li>
