@@ -56,6 +56,7 @@
   * /resources/templates
     * [addSongs.html](./src/main/resources/templates/addSongs.html)
     * [albums.html](./src/main/resources/templates/albums.html)
+    * [allAlbums.html](./src/main/resources/templates/allAlbums.html)
     * [allSongs.html](./src/main/resources/templates/allSongs.html)
     * [capitalize.html](./src/main/resources/templates/capitalize.html)
     * [error.html](./src/main/resources/templates/error.html)
