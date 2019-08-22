@@ -27,7 +27,9 @@
 
 <a name="resources"></a>
 ### Resources
-* [HTML Forms](https://www.w3schools.com/html/html_forms.asp)
+* [ThymeLeaf Error Page](https://www.logicbig.com/tutorials/spring-framework/spring-boot/custom-thymeleaf-error-page.html)
+* [Bootstrap Form](https://getbootstrap.com/docs/4.3/components/forms/#horizontal-form)
+* [NavBar](https://getbootstrap.com/docs/4.3/components/navbar/#nav)
 * Matt Stuhring
 * Renee Messick
 * Travis Cox
@@ -47,6 +49,7 @@
   * /resources/templates
     * [albums.html](./src/main/resources/templates/albums.html)
     * [capitalize.html](./src/main/resources/templates/capitalize.html)
+    * [error.html](./src/main/resources/templates/error.html)
     * [hello.html](./src/main/resources/templates/hello.html)
     * [index.html](./src/main/resources/templates/index.html)
     * [reverse.html](./src/main/resources/templates/reverse.html)
