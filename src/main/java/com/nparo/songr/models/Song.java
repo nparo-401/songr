@@ -18,7 +18,7 @@ public class Song {
   
   public Song(String title, int length, int trackNumber, Album album) {
     this.title = title;
-    this.length = length;
+    this.length = length * 60;
     this.trackNumber = trackNumber;
     this.album = album;
   }
