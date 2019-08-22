@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="UTF-8">
-	<title>Single Album</title>
+	<title>Add Songs</title>
 	<link
 	 href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	 rel="stylesheet"
@@ -13,14 +13,14 @@
 <body>
 	<div class="jumbotron">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="#">Songr</a>
+			<a class="navbar-brand" href="/">Songr</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
-					<a class="nav-item nav-link active" th:href="${'/albums'}">Add Album
-						<span class="sr-only">(current)</span></a>
+					<a class="nav-item nav-link" th:href="${'/albums'}">Add Album</a>
+					<a class="nav-item nav-link" th:href="${'/allAlbums'}">All Albums</a>
 					<a class="nav-item nav-link" th:href="${'/songs'}">Add Song</a>
 					<a class="nav-item nav-link" th:href="${'/allSongs'}">All Songs</a>
 				</div>
