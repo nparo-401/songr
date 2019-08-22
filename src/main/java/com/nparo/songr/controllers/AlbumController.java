@@ -21,10 +21,17 @@ public class AlbumController {
   ArtistRepository artistRepository;
   
   @GetMapping("/albums")
-  public String getAllAlbums(Model m) {
+  public String getAlbums(Model m) {
     List<Album> albums = albumRepository.findAll();
     m.addAttribute("albums", albums);
     return "albums";
+  }
+  
+  @GetMapping("/allAlbums")
+  public String getAllAlbums(Model m) {
+    List<Album> albums = albumRepository.findAll();
+    m.addAttribute("albums", albums);
+    return "allAlbums";
   }
   
   @PostMapping("/albums")

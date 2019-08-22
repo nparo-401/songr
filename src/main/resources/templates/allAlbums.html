@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Add Songs</title>
+	<title>All Albums</title>
 	<link
 	 href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	 rel="stylesheet"
@@ -26,21 +26,26 @@
 				</div>
 			</div>
 		</nav>
-		<h1 th:text="${album.title}"></h1>
-		<img th:src="${album.imageUrl}" alt="cover image" width="200">
+		<h1>All Albums</h1>
 	</div>
 	
 	<div class="container">
-		<h2>Tracks</h2>
 		<div class="row">
-			<div th:each="song : ${album.songs}" class="col-4">
-				<ul style="list-style-type:none">
-					<li><b>Song: </b><span th:id="${song.title}" th:text="${song.title}"></span></li>
-					<li><b>Length: </b><span th:id="${song.length}" th:text="${song.length}"></span> minutes</li>
-					<li><b>Track Number: </b><span th:id="${song.trackNumber}" th:text="${song.trackNumber}"></span></li>
-				</ul>
+			<div th:each="album : ${albums}" class="col-4">
+				<a th:href="${ '/songs/ ' + album}" style="color:black; text-decoration:none">
+					<ul style="list-style-type:none">
+						<li><b>Album:</b> <span th:id="${album.title}" th:text="${album.title}"></span></li>
+						<li><b>Artist:</b> <span th:id="${album.artist}" th:text="${album.artist}"></span></li>
+						<li><b>Song Count:</b> <span th:id="${album.songCount}" th:text="${album.songCount}"></span> songs</li>
+						<li><b>Length:</b> <span th:id="${album.length}" th:text="${album.length}"></span> seconds</li>
+						<li>
+							<img th:src="${album.imageUrl}" alt="cover image" width="100">
+						</li>
+					</ul>
+				</a>
 			</div>
 		</div>
 	</div>
+
 </body>
 </html>
