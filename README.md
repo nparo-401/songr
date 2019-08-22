@@ -28,8 +28,9 @@
 <a name="resources"></a>
 ### Resources
 * [ThymeLeaf Error Page](https://www.logicbig.com/tutorials/spring-framework/spring-boot/custom-thymeleaf-error-page.html)
+* [Bootstrap Grid Layout](https://getbootstrap.com/docs/4.3/layout/grid/)
 * [Bootstrap Form](https://getbootstrap.com/docs/4.3/components/forms/#horizontal-form)
-* [NavBar](https://getbootstrap.com/docs/4.3/components/navbar/#nav)
+* [Bootstrap NavBar](https://getbootstrap.com/docs/4.3/components/navbar/#nav)
 * Matt Stuhring
 * Renee Messick
 * Travis Cox
