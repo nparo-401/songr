@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Songs</title>
+	<link
+	 href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	 rel="stylesheet"
+	 integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	 crossorigin="anonymous"
+	>
+</head>
+<body>
+	<div class="jumbotron">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">Songr</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+					<a class="nav-item nav-link active" th:href="${'/albums'}">Add Album
+						<span class="sr-only">(current)</span></a>
+					<a class="nav-item nav-link" th:href="${'/songs'}">Add Song</a>
+					<a class="nav-item nav-link" th:href="${'/allSongs'}">All Songs</a>
+				
+				</div>
+			</div>
+		</nav>
+		<h1 th:text="${album.title}"></h1>
+		<img th:src="${album.imageUrl}" alt="cover image" width="200">
+	</div>
+	<div class="container">
+		<h2>Tracks</h2>
+		<div class="row">
+			<div th:each="song : ${album.songs}" class="col-4">
+				<ul style="list-style-type:none">
+					<li><b>Song: </b><span th:id="${song.title}" th:text="${song.title}"></span></li>
+					<li><b>Length: </b><span th:id="${song.length}" th:text="${song.length}"></span> minutes</li>
+					<li><b>Track Number: </b><span th:id="${song.trackNumber}" th:text="${song.trackNumber}"></span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

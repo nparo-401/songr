@@ -1,24 +1,29 @@
 package com.nparo.songr.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Album {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   long id;
-  String title;
-  String artist;
-  int songCount;
-  int length;
-  String imageUrl;
+  private String title;
+  
+  @ManyToOne
+  private Artist artist;
+  
+  @OneToMany(fetch = FetchType.EAGER, mappedBy = "album")
+  private List<Song> songs;
+  
+  
+  private int songCount;
+  private int length;
+  private String imageUrl;
   
   public Album() {}
   
-  public Album(String title, String artist, int songCount, int length, String imageUrl) {
+  public Album(String title, Artist artist, int songCount, int length, String imageUrl) {
     this.title = title;
     this.artist = artist;
     this.songCount = songCount;
@@ -30,7 +35,7 @@ public class Album {
     return title;
   }
   
-  public String getArtist () {
+  public Artist getArtist () {
     return artist;
   }
   
@@ -44,5 +49,9 @@ public class Album {
   
   public String getImageUrl () {
     return imageUrl;
+  }
+  
+  public List<Song> getSongs () {
+    return songs;
   }
 }

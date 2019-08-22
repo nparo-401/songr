@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Albums</title>
+	<title>Single Album</title>
 	<link
 	 href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-   rel="stylesheet"
+	 rel="stylesheet"
 	 integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	 crossorigin="anonymous"
 	>
@@ -26,42 +26,35 @@
 				</div>
 			</div>
 		</nav>
-		<h1>Add Album</h1>
+		<h1>Add Song</h1>
 	</div>
 	
 	<div class="container">
-		<form method="POST" action="/albums">
+		<form method="POST" action="/songs">
 			<div class="form-group row">
-				<label for="title" class="col-sm-2 col-form-label">Album Title:</label>
+				<label for="title" class="col-sm-2 col-form-label">Song Title:</label>
 				<div class="col-sm-10">
-					<input type="text" class="form-control" id="title" placeholder="Album Title" name="title">
+					<input type="text" class="form-control" id="title" placeholder="Song Title" name="title">
 				</div>
 			</div>
 			<div class="form-group row">
-				<label for="artist" class="col-sm-2 col-form-label">Artist:</label>
+				<label for="length" class="col-sm-2 col-form-label">Song Length:</label>
 				<div class="col-sm-10">
-					<input type="text" class="form-control" id="artist" placeholder="Artist" name="artist">
+					<input type="number" class="form-control" id="length" placeholder="Song Length (in minutes)" name="length">
 				</div>
 			</div>
 			<div class="form-group row">
-				<label for="songCount" class="col-sm-2 col-form-label">Song Count:</label>
+				<label for="trackNumber" class="col-sm-2 col-form-label">Track Number:</label>
 				<div class="col-sm-10">
-					<input type="number" class="form-control" id="songCount" placeholder="Song Count" name="songCount">
+					<input type="number" class="form-control" id="trackNumber" placeholder="Track Number" name="trackNumber">
 				</div>
 			</div>
 			<div class="form-group row">
-				<label for="length" class="col-sm-2 col-form-label">Length:</label>
+				<label for="album" class="col-sm-2 col-form-label">Album:</label>
 				<div class="col-sm-10">
-					<input type="number" class="form-control" id="length" placeholder="Album Length (in minutes)" name="length">
+					<input type="text" class="form-control" id="album" placeholder="Album" name="album">
 				</div>
 			</div>
-			<div class="form-group row">
-				<label for="imageUrl" class="col-sm-2 col-form-label">Image URL:</label>
-				<div class="col-sm-10">
-					<input type="url" class="form-control" id="imageUrl" placeholder="Image URL" name="imageUrl">
-				</div>
-			</div>
-			
 			<div class="form-group row">
 				<div class="col-sm-10">
 					<button type="submit" class="btn btn-primary">Submit</button>
@@ -69,16 +62,14 @@
 			</div>
 		</form>
 	</div>
-		
+
 	<div class="container">
+		<h3>Available Albums</h3>
 		<div class="row">
-			<div th:each="album : ${albums}" class="col-4">
+			<div th:each="album : ${albums}">
 				<a th:href="${ '/songs/ ' + album}" style="color:black; text-decoration:none">
 					<ul style="list-style-type:none">
-						<li><b>Album:</b> <span th:id="${album.title}" th:text="${album.title}"></span></li>
-						<li><b>Artist:</b> <span th:id="${album.artist}" th:text="${album.artist}"></span></li>
-						<li><b>Song Count:</b> <span th:id="${album.songCount}" th:text="${album.songCount}"></span> songs</li>
-						<li><b>Length:</b> <span th:id="${album.length}" th:text="${album.length}"></span> seconds</li>
+						<li><b>Album: </b><span th:text="${album.title}"></span></li>
 						<li>
 							<img th:src="${album.imageUrl}" alt="cover image" width="100">
 						</li>
@@ -87,5 +78,6 @@
 			</div>
 		</div>
 	</div>
+
 </body>
 </html>
